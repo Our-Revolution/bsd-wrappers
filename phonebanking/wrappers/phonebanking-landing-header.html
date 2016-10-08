@@ -1,0 +1,753 @@
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="x-ua-compatible" content="IE8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone Bank for Our Revolution</title>
+<meta property="og:image" content="https://s.bsd.net/bernie16/ourrevolution/page/-/images/meta_graphic.png">
+<link rel="shortcut icon" href="https://ourrevolution-bernie16.bsd.net/page/-/images/favicon.ico">
+<meta name="description" content="Phone bank for Our Revolution today." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Our Revolution" />
+<meta property="og:description" content="Phone bank for Our Revolution today." />
+<meta property="og:site_name" content="Our Revolution" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Our Revolution"/>
+<meta name="twitter:description" content="Phone bank for Our Revolution today."/>
+<meta name="twitter:site" content="@OurRevolution"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"  />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80816425-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<style>
+
+body {
+  font-family: 'lato', sans-serif;
+  color: #364350;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo {
+  width: 112px;
+  height: 56px;
+  background-image: url("https://s.bsd.net/bernie16/ourrevolution/page/-/images/our-revolution-logo-white.png");
+  background-size: 112px 56px;
+  background-repeat: no-repeat;
+  text-shadow: none;
+  font-size: 0.1px;
+  text-indent: -99rem;
+  float: left;
+  margin-top: 2rem;
+}
+
+@media (min-width: 520px) {
+  .logo{
+    margin-top: 0;
+  }
+}
+
+header {
+  padding-top: 0.75rem;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/78060/020916_Bernie_NH_Primary-327053.jpg);
+  background-color: #02030d;
+  background-size: cover;
+  background-position: bottom right;
+  height: 40vh;
+  font-size: 1.05em;
+}
+@media (min-width: 720px) {
+  header {
+    font-size: 1.3em;
+  }
+}
+
+header h1,
+header h2 {
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.75);
+}
+
+header h1 {
+  color: #FF5555;
+  font-size: 1.1em;
+}
+
+.party,
+.party:link,
+.party:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    background-color: #F54D4D;
+    border-radius: 0;
+    display: block;
+    letter-spacing: 0.15em;
+    padding: 0.5rem 1.7rem;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: -0.75rem 0 0;
+    font-size: 0.9rem;
+}
+
+.party:hover,
+.party:focus{
+  background-color: #ff4545;
+}
+
+@media (min-width: 520px) {
+  .party,
+  .party:link,
+  .party:visited{
+    position: relative;
+    margin: 0.4em auto 0;
+    border-radius: 2px;
+    width: 250px;
+    font-size: 0.825rem;
+    padding: 0.65rem 1.2rem;
+    letter-spacing: 0.125em;
+    float: right;
+  }
+}
+
+@media (min-width: 720px) {
+}
+
+/*#conference a { color: #53A2F2;
+font-weight: 700;  }
+#conference a:hover {
+color: #249ffb;
+text-decoration: none; }*/
+
+
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.stretch {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 40vh;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-content: flex-end;
+      -ms-flex-line-pack: end;
+          align-content: flex-end;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col-3 {
+  width: 100%;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+@media (min-width: 520px) {
+  .col-3 {
+    width: 49%;
+  }
+}
+@media (min-width: 720px) {
+  .col-3 {
+    width: 32.5%;
+  }
+}
+
+.date.col-2 .col-3 {
+  width: 100%;
+}
+@media (min-width: 720px) {
+  .date.col-2 .col-3 {
+    width: 100%;
+  }
+}
+
+
+/* ===PriorityCOL=== */
+
+#priority .col-3 {
+  width: 100%;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+@media (min-width: 520px) {
+  #priority .col-3 {
+    width: 49%;
+  }
+}
+@media (min-width: 720px) {
+  #priority .col-3 {
+    width: 32.5%;
+  }
+}
+
+#priority .date.col-2 .col-3 {
+  width: 100%;
+color: #e60000;
+}
+@media (min-width: 720px) {
+  #priority .date.col-2 .col-3 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 720px) {
+  #priority .col-3 {
+    width: 100%;
+  }
+}
+
+
+
+.date.col-2 {
+  width: 100%;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+@media (min-width: 520px) {
+  .date.col-2 {
+    width: 49%;
+  }
+}
+@media (min-width: 720px) {
+  .date.col-2 {
+    width: 49%;
+  }
+}
+
+@media (min-width: 720px) {
+  .priority .col-3 {
+    width: 100%;
+  }
+}
+
+.priority {
+  width: 100%;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+}
+@media (min-width: 520px) {
+  .priority {
+    width: 49%;
+  }
+}
+@media (min-width: 720px) {
+  .priority {
+    width: 49%;
+  }
+}
+
+.upcoming {
+  margin-top: 2em;
+}
+
+.date {
+  background-color: #e6eaf4;
+  padding: 0.75em 0.5em;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  font-family: 'lato', sans-serif;
+  color: #2C4667;
+  border-radius: 3px;
+  font-family: 'lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 1.1em;
+  width: 100%;
+  -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+}
+@media (min-width: 720px) {
+  .date {
+    padding: 0.75em 1em;
+  }
+}
+
+.date ul {
+  margin-top: 0.5em;
+}
+
+.state {
+  font-family: 'lato', sans-serif;
+  font-size: 1.25em;
+  background-color: #53A2F2;
+  border-left: 4px solid #74c1ff;
+  display: block;
+  box-sizing: border-box;
+  padding: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0.5vw 0;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  font-family: 'lato', sans-serif;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.offline.state {
+    background-color: #C7CDDC;
+    border-left: 4px solid #BAC1D0;
+    color: #7E8698;
+}
+
+.offline.state:hover,
+.state:focus {
+  text-decoration: none;
+  background-color: #C7CDDC;
+  box-shadow: none;
+  -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+}
+
+@media (min-width: 720px) {
+  .state {
+    padding: 0.9em 1em;
+    font-size: 1.35em;
+  }
+}
+
+.state:hover,
+.state:focus {
+  text-decoration: none;
+  background-color: #0e94ff;
+  box-shadow: 0px 2px 8px #adb7d2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+
+.announcement a:link {
+  text-decoration: underline blue;
+  color: #0066ff;
+  font-weight: 900;
+}
+
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+h1, h2, h3, h5, p, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 1em;
+}
+
+h1, h3 {
+  font-family: 'lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #53A2F2;
+}
+
+.notification {
+  border-left: 4px solid #53A2F2;
+  background-color: #F2F3F7;
+  padding: 1em;
+  line-height: 1.3;
+  margin-top: 1em;
+}
+
+.notification h4 {
+    color: #364350;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 0.3em 0 0.8em;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+  color: #FF5555;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+@media (min-width: 414px) {
+  h1 {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 960px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.4em;
+  }
+}
+
+#state-links span {
+  font-weight: 400;
+  font-family: 'lato', sans-serif;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+h2 {
+  font-family: 'lato', sans-serif;
+  font-weight: 500;
+  color: #53A2F2;
+  line-height: 0.9;
+  font-size: 1.8em;
+}
+@media (min-width: 414px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 960px) {
+  h2 {
+    font-size: 2.4em;
+  }
+}
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 3em;
+  }
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-top: 2em;
+}
+@media (min-width: 414px) {
+  h3 {
+    font-size: 1.2em;
+    margin-top: 1.8em;
+  }
+}
+@media (min-width: 520px) {
+  h3 {
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 960px) {
+  h3 {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1400px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.8em;
+  font-family: 'lato', sans-serif;
+  letter-spacing: 0em;
+  font-weight: 600;
+  color: #3c576b;
+  margin-top: .7em;
+  margin-bottom: .3em;
+}
+
+@media (min-width: 414px) {
+  h4 {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 960px) {
+  h4 {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 1400px) {
+  h4 {
+    font-size: 2.2em;
+  }
+}
+
+
+p,
+.notification {
+  line-height: 1.3;
+  margin: 0.7em 0;
+  font-size: 1em;
+}
+@media (min-width: 414px) {
+  p,
+  .notification {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 520px) {
+  p,
+  .notification {
+    font-size: 1.15em;
+  }
+}
+@media (min-width: 960px) {
+  p,
+  .notification {
+    font-size: 1.2em;
+    margin: 0.9em 0;
+    line-height: 1.4;
+  }
+}
+@media (min-width: 1200px) {
+  p,
+  .notification {
+    font-size: 1.2em;
+  }
+}
+
+header .container {
+  height: 40vh;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 1em;
+  left: 1.25rem;
+}
+@media (min-width: 520px) {
+  .bottom {
+    left: 2.5rem;
+  }
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1.25rem;
+}
+@media (min-width: 520px) {
+  .container {
+    padding: 0 2.25rem;
+  }
+}
+.steps {
+  background-color: #eff3f7;
+  border-left: 4px solid #d7e0e9;
+  padding: 1em;
+  border-radius: 1px 5px 5px 1px;
+  margin: 1.4em 0;
+}
+@media (min-width: 414px) {
+  .steps {
+    padding: 1em 1.5em;
+  }
+}
+@media (min-width: 960px) {
+  .steps {
+    padding: 1.5em 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .steps {
+    padding: 2em 3em;
+    margin: 1.8em 0;
+  }
+}
+.steps h4 {
+  color: #53A2F2;
+  font-family: 'lato', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 1.4em;
+  margin-top: 0.2em;
+}
+@media (min-width: 720px) {
+  .steps h4 {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 960px) {
+  .steps h4 {
+    font-size: 1.7em;
+  }
+}
+@media (min-width: 1200px) {
+  .steps h4 {
+    font-size: 2em;
+  }
+}
+.steps ol {
+  list-style-type: none;
+  counter-reset: ol-counter;
+  margin-left: 2.2em;
+}
+.steps ol li {
+  margin: 0.9em 0;
+  line-height: 1.2;
+}
+.steps ol li:before {
+  content: counter(ol-counter);
+  counter-increment: ol-counter;
+  display: inline-block;
+  font-size: 0.8em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #8fa1af;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1.45;
+  margin-left: -2.4em;
+  margin-right: 0.95em;
+  font-family: 'lato', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+.steps p {
+  font-size: 0.85em;
+}
+@media (min-width: 720px) {
+  .steps p {
+    font-size: 0.95em;
+  }
+}
+
+/* ===FOOTER=== */
+footer {
+  margin-top: 4em;
+  text-align: center;
+  background-color: #edf0f7;
+  clear: both;
+  font-weight: 400;
+  padding: 3em 0.5em 1em;
+}
+
+footer .address {
+  text-align: center;
+  clear: both;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+footer p {
+  text-align: center;
+  clear: both;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: lowercase;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+footer a,
+footer a:link,
+footer a:visited {
+  text-decoration: none;
+  color: #364350;
+}
+
+footer a:hover,
+footer a:link:hover,
+footer a:visited:hover {
+  color: #147FD7;
+}
+
+footer .disclaimer {
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid #364350;
+  font-size: 1rem;
+  max-width: 300px;
+  padding: 0.5rem 0;
+  margin: 3rem auto 0;
+}
+
+footer .billionaires {
+  display: block;
+  margin: 1rem auto 3rem;
+  width: 197px;
+  height: 29px;
+  background-image: url("https://s.bsd.net/bernie16/main/page/-/website/billionaires.png");
+  background-size: 197px 29px;
+  text-indent: -9999em;
+  overflow: hidden;
+  color: transparent;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  footer .billionaires {
+    background-image: url("https://s.bsd.net/bernie16/main/page/-/website/billionaires-2x.png");
+  }
+}
+
+</style>
+</head>
