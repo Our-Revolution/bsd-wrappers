@@ -1,5 +1,54 @@
-.content {
-    visibility: hidden;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="IE8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Revolution</title>
+  <meta property="og:image" content="https://s.bsd.net/bernie16/ourrevolution/page/-/images/meta_graphic.png">
+  <meta name="description" content="The next step for Bernie Sanders' movement is a new group called Our Revolution, which will fight to transform America and advance the progressive agenda that we believe in." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Our Revolution" />
+  <meta property="og:description" content="The next step for Bernie Sanders' movement is a new group called Our Revolution, which will fight to transform America and advance the progressive agenda that we believe in." />
+  <meta property="og:site_name" content="Our Revolution" />
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Our Revolution"/>
+  <meta name="twitter:description" content="The next step for Bernie Sanders' movement is a new group called Our Revolution, which will fight to transform America and advance the progressive agenda that we believe in."/>
+  <meta name="twitter:site" content="@OurRevolution"/>
+  <link rel="shortcut icon" href="https://ourrevolution-bernie16.bsd.net/page/-/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css"  />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
+.embed-responsive {
+
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#signupheader h2 {
+    color: #F55B5B;
+    font-family: "lato";
+    padding-bottom: 0.1rem;
+    color: #F55B5B;
+    font-family: "lato";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding-bottom: 0.1rem;
 }
 
 div {
@@ -993,6 +1042,12 @@ select:not([multiple]) {
     padding: 0.1em 0.5em 0;
     width: 100%;
     z-index: 99;
+   color: #333;
+}
+
+#event_rsvp select {
+  position: relative;
+  background-color: white;
 }
 
 .select-wrapper:after {
@@ -1293,6 +1348,25 @@ select:not([multiple]) {
     font-size: 1.1rem;
     color: #147FD7;
     padding-bottom: 0.4rem;
+}
+
+#eventcreate .typedesc .type-title {
+  padding-bottom: 0;
+  color: #53a2f2;
+  font-size: 2.2rem;
+  font-family: "lato", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+}
+
+#eventcreate .field {
+  vertical-align: middle;
+}
+
+.bsd-page-header-content {
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 .step1 #eventcreate .intro-content {
@@ -4511,19 +4585,199 @@ only screen and (min-device-pixel-ratio:1.5) {
     line-height: 1.0;
 }
 
-.new-button-fb {
-    background: url(https://s.bsd.net/page/static/20160411/images/invite/bsd-fbShareBG.png) repeat-x top left;
-}
-
-.new-button-fb a span {
-    background: url(https://s.bsd.net/page/static/20160411/images/invite/bsd-fbIcon.png) no-repeat left;
+.new-button-fb:hover {
+  background-color: #324c82;
 }
 
 .new-button-tw {
-    background: url(https://s.bsd.net/page/static/20160411/images/invite/bsd-twShareBG.png) repeat-x top left;
+  background-color: #55acee;;
 }
 
-.new-button-tw a span {
-    padding-left: 30px;
-    background: url(https://s.bsd.net/page/static/20160411/images/invite/bsd-twIcon.png) no-repeat left;
+.new-button-tw:hover {
+  background-color: #52a7e8;
 }
+
+.bsd-event-share form#event_rsvp select[name="will_attend"] {
+  position: relative;
+  color: #364350;
+  background: white;
+  font-weight: 300;
+  font-family: lato;
+  font-size: 1.25em;
+}
+
+@media (min-width:768px) {
+  .bsd-event-share #rsvp_container {
+    padding: 0.2rem 1.2rem;
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+    float: right;
+    width: 35%;
+  }
+}
+
+.bsd-event-share #rsvp_container h2 {
+  color: white;
+}
+.bsd-event-share #rsvp_container {
+  color: #C4DFF5;
+}
+
+.bsd-event-share#SKIN .basic .main h2#sectionheader {
+    font-family: 'lato';
+    color: #FFF;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+    text-transform: none;
+    line-height: 1.1;
+    letter-spacing: 0;
+    border-bottom: 0;
+    /* border-bottom: 2px solid #8ABFEB; */
+    /* padding-bottom: 0.4em; */
+}
+
+.bsd-event-share #rsvp_container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bsd-event-share #rsvp_container table#signup {
+  width: 100%;
+  box-shadow: none;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.bsd-event-share #rsvp_container #signup input[type="submit"] {
+  margin-bottom: 0;
+}
+
+.bsd-event-share#SKIN #eventdetail .detailtable_container {
+  background: #EFF3F7;
+  border-left: 2px solid #A7B6C5;
+  border-top: 1px solid #E2EBF3;
+  border-right: 1px solid #E2EBF3;
+  border-bottom: 1px solid #E2EBF3;
+  margin-bottom: 18px;
+  padding: 20px 20px 30px;
+  border-radius: 0 3px 3px 0;
+}
+
+.bsd-event-share #rsvp_container #shift_information .shiftstable {
+
+}
+
+.bsd-event-share#SKIN #rsvp_container table {
+  width: 100%;
+  text-align: left;
+}
+
+.bsd-event-share#SKIN #rsvp_container table th {
+    color: #C4DFF5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: lato;
+}
+
+@media (min-width:768px) {
+
+  .bsd-event-share#SKIN #eventdetail .detailtable_container {
+    float: left;
+    width: 60%;
+    margin-right: 5%;
+    box-sizing: border-box;
+    margin-top: 1em;
+    padding-bottom: 4em;
+    padding-right: 1.5em;
+    padding-left: 0;
+  }
+}
+
+.bsd-event-share#SKIN #invite_form {
+    padding: 20px;
+    background-color: #147FD7;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bsd-event-share#SKIN #invite_form th, .bsd-event-share#SKIN #invite_form td {
+  color: white;
+}
+
+.bsd-event-share#SKIN .bsd-widget-inner-content {
+    display: inline;
+}
+
+.bsd-event-share#SKIN #account_actions #login_status {
+  display: none;
+}
+
+@media (max-width: 768px) {
+	.nomobile {
+		display: none;
+	}
+	#signup {
+		margin-top: 0;
+	}
+}
+
+span.signuperror {
+    color: #f55b5b;
+}
+span.error {
+    color: white;
+    /* border: 1px solid #f55b5b; */
+}
+.fundraise #outreach_content .omhead, .bsd-outreach-login #outreach_content h2, .event-central.details #SKIN .basic .main h2#sectionheader, .event-central #SKIN h1, .event-central.search #SKIN h1, .reset-password #forgotpw .header, .event-central.login #myeventslogin .subhead, h1 {
+    padding-bottom: 0;
+    color: #53a2f2;
+    font-size: 2.2rem;
+    font-family: "lato", sans-serif;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 700;
+}
+.event-central.signup-success #SKIN .basic .main h2#sectionheader, h2 {
+    font-size: 1.8rem;
+    font-family: "lato", sans-serif;
+}
+.content>h3 {
+    font-size: 1.2rem;
+    font-family: "lato", sans-serif;
+}
+h3 {
+    font-size: 1.2rem;
+    font-family: "lato", sans-serif;
+}
+.content-wrap {
+  max-width: 800px;
+  margin: auto;
+}
+header h1 {
+    background-image: url("https://s.bsd.net/bernie16/ourrevolution/page/-/images/our-revolution-logo-3-color.png"); !important;
+    width: 112px !important;
+    height: 56px !important;
+    background-size: 112px 56px !important;
+}
+</style>
+
+</head>
+
+<header id="bsd-header" class="clear">
+<div class="container">
+  <a href="//ourrevolution.com/"><h1>Our Revolution</h1></a>
+
+  <div class="contribute">
+    <a href="https://secure.actblue.com/contribute/page/ourrevolution?refcode=bsd-signup-page" class="contribute">
+       Contribute
+    </a>
+  </div>
+</div>
+</header>
+<div class="content">
